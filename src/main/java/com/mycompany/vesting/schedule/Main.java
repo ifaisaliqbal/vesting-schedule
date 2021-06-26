@@ -25,9 +25,11 @@ public class Main {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
+     * @throws java.text.ParseException
      */
     public static void main(String[] args) throws IOException, ParseException {
-        String path = "C:\\Users\\iqbal\\Desktop\\vevent.csv";
+        String path = "vevent.csv";
         Date date = new SimpleDateFormat("yyyy-MM-dd").parse("2020-05-01");
         VestingDataService dataSvc = new VestingDataService(path);
         List<VestingEvent> vestingEvents = dataSvc.getVestingData();
